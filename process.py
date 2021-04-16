@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 
 def DealWiFi(count, j):
-    img_path = '../recombination/' + str(j) + '.jpg'
+    img_path = 'recombination/' + str(j) + '.jpg'
     img = cv.imread(img_path)
     img1 = img.copy()
     img2 = img.copy()
@@ -159,7 +159,7 @@ def DealWiFi(count, j):
         y2 = abs(max(Ys))
         hight = y2 - y1
         width = x2 - x1
-        save_path = '../res1/' + str(count) + '.jpg'
+        save_path = 'res1/' + str(count) + '.jpg'
         crop_img = img2[y1 : y1 + hight, x1 : x1 + width]
         cv.imwrite(save_path, crop_img)
         count += 1
@@ -168,7 +168,7 @@ def DealWiFi(count, j):
     return pre, count
 
 def DealWiFiWithOutDraw(j):
-    img_path = '../recombination/' + str(j) + '.jpg'
+    img_path = 'recombination/' + str(j) + '.jpg'
     img = cv.imread(img_path)
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     #平滑滤波
@@ -293,7 +293,7 @@ def DealWiFiWithOutDraw(j):
         # y2 = abs(max(Ys))
         # hight = y2 - y1
         # width = x2 - x1
-        # save_path = '../result/' + str(count) + '.jpg'
+        # save_path = 'result/' + str(count) + '.jpg'
         # crop_img = img[y1 : y1 + hight, x1 : x1 + width]
         # cv.imwrite(save_path, crop_img)
     # cv.imshow('original1-' + str(j), img)
@@ -302,7 +302,7 @@ def DealWiFiWithOutDraw(j):
 
 def DealBlueTooth(count, pre, j):
     #处理蓝牙和私有协议
-    img_path = '../recombination/' + str(j) + '.jpg'
+    img_path = 'recombination/' + str(j) + '.jpg'
     img = cv.imread(img_path)
     img1 = img.copy()
     img2 = img.copy()
@@ -436,7 +436,7 @@ def DealBlueTooth(count, pre, j):
         y2 = abs(max(Ys))
         hight = y2 - y1
         width = x2 - x1
-        # save_path = '../test/' + str(count) + '.jpg'
+        # save_path = 'test/' + str(count) + '.jpg'
         # crop_img = img2[y1 : y1 + hight, x1 : x1 + width]
         # cv.imwrite(save_path, crop_img)
         # count += 1

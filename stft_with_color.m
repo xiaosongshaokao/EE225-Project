@@ -1,6 +1,6 @@
 for j = 1:10
     batch_num = j;
-    data_name = sprintf('RFRecord_%d.mat',batch_num);
+    data_name = sprintf('input/RFRecord_%d.mat',batch_num);
     dataset = load(data_name);
     Y = dataset.mat;
     % each time: 0.0262s (I guess maybe 0.026199990005496976662835440507721s actual
